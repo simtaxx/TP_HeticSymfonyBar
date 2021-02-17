@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('styles') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {{ render(controller('App\\Controller\\BarController:mainMenu',
+        {
+            'routeName' : path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')),
+            'category_id' : app.request.attributes.get('id') ?? ''
+        })) }}
+        <div class="container">
+            <div class="col-md-12">
+            {% block body %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

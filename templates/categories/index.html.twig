@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+<h2>Bières {{ title }}:</h2>
+<div class="row">
+{% for beer in beers %}
+  <div class="col-sm-6">
+    <div class="card card__beers">
+      <div class="card-body">
+        <a href="{{ path('beer', { 'id' : beer.id }) }}" class="card-title">{{ beer.name }}</a>
+        <p>Price : {{ beer.price ?? 'aucune information' }} </p>
+        <p>Degree : {{ beer.degree }} </p>
+        <p>{{ beer.description }}</p>
+        <p><small>Date d'invention : {{ beer.publishedAt | date('d/m/Y h:i:s') }} </small></p>
+        <img src="{{ asset('build/images/beer_00.jpg') }}" />
+        <p> Country : {{ beer.country.name}} </p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+{% endblock %}
