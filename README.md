@@ -20,7 +20,6 @@
   ```
 
   findCatSpecial() exécute une requête qui va faire une jointure entre la table category et beer via l'ORM
-
   et va retourner les catégories spéciales d'une bière.
 
 
@@ -28,5 +27,6 @@
 
   - Donaël Walter
   - Haris Souici
+  - Loïc TORRES
   - Najib Tahar-Berrabah
   - Tom Despres
