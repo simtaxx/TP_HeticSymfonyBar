@@ -27,6 +27,6 @@
 
   - Donaël Walter
   - Haris Souici
-  - Loïc TORRES
+  - Loïc Torres
   - Najib Tahar-Berrabah
   - Tom Despres
